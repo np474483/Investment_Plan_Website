@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login</title>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </head>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #7d2ae8;
+  padding: 30px;
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 30%;
+  background: #fff;
+  padding: 40px 30px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.container .form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.container .form-content .title {
+  position: relative;
+  font-size: 22px;
+  font-weight: 500;
+  color: #0d0d0d;
+  margin-bottom: 20px;
+}
+
+.container .form-content .title:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  background: #ebb619;
+}
+
+.container .form-content .input-boxes {
+  margin-top: 30px;
+}
+
+.container .form-content .input-box {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  margin: 10px 0;
+}
+
+.container .form-content .input-box input {
+  flex: 1;
+  height: 100%;
+  outline: none;
+  border: none;
+  padding: 0 30px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.container .form-content .input-box input:focus,
+.container .form-content .input-box input:valid {
+  border-color: #7d2ae8;
+}
+
+.container .form-content .input-box i {
+  color: #7d2ae8;
+  font-size: 17px;
+}
+
+.container .form-content .text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.container .form-content .text a {
+  text-decoration: none;
+}
+
+.container .form-content .text a:hover {
+  text-decoration: underline;
+}
+
+.container .form-content .button {
+  margin-top: 40px;
+}
+
+.container .form-content .button input {
+  color: #fff;
+  background: #7d2ae8;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.container .form-content .button input:hover {
+  background: #5b13b9;
+}
+
+.container .form-content label {
+  color: #5b13b9;
+  cursor: pointer;
+}
+.container .form-content .button a {
+  color: #fff;
+  background: #7d2ae8;
+  border-radius: 6px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  display: block;
+  text-align: center;
+}
+
+.container .form-content .button a:hover {
+  background: #5b13b9;
+  
+}
+  </style>
+  <body>
+    <div class="container">
+      <div class="forms">
+        <div class="form-content">
+          <div class="plan1-form">
+            <div class="title">Report Of User Data</div>
+            <form action="oneuserReport.php" method="POST">
+             </div>
+             <h5>Show User Data By Their Email & Id</h5>
+                <div class="input-box">
+                  <i class="fas fa-envelope"></i>
+                  <input
+                    type="email"
+                    name="user_email" title="Please enter user email"
+                    placeholder="Enter User's Email"
+                    required />
+                </div>
+
+                <div class="input-box">
+                    <i class="fas fa-id-card"></i>
+                    <input
+                      type="number" name="userId"
+                      name="password" title="Please enter id"
+                      placeholder="Enter User's Id"
+                       required/>
+                  </div>
+                
+                <div class="button input-box">
+                  <input type="submit" value="Submit" />
+                </div>
+                <h4 style="text-align: center;">OR</h4>
+                <div class="button input-box">
+                  <a href="userReport.php" class="button input-box" style="margin-left: 25%;">Show All User Data</a>                  </div>
+               
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+</body>
+</html>
